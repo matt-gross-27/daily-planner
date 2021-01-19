@@ -34,22 +34,28 @@ $(".clearBtn").on("click", function() {
 
 // save plans function
 var savePlans = function() {
-  localStorage.setItem("work-day-scheduler",JSON.stringify(plansObj))
+  localStorage.setItem("work-day-scheduler", JSON.stringify(plansObj))
 }
 
 // load plans function
 var loadPlans = function() {
-  // gets PlansObj from local storage
-  plansObj = JSON.parse(localStorage.getItem("work-day-scheduler"))
-  // for each timeBlock
-  $.each(timeBlocks,function(){
-    id = $(this).attr("id")
-    $(this)
-      .children("textarea")
-      .val(plansObj[id])
-  });
+  if(!localStorage.getItem("work-day-scheduler")) {
+    plansObj = {};
+    savePlans();
+    loadPlans();
+  } 
+  else {
+    // gets PlansObj from local storage
+    plansObj = JSON.parse(localStorage.getItem("work-day-scheduler"))
+    // for each timeBlock
+    $.each(timeBlocks,function(){
+      id = $(this).attr("id")
+      $(this)
+        .children("textarea")
+        .val(plansObj[id])
+    });
+  }
 }
-
 // ~~~~~ SET CLASSES ~~~~~
 // function to properly classes timeBlocks
 var setTimeBlockClass = function(){
