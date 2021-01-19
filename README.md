@@ -13,7 +13,7 @@
 * ⚠️🔒⚠️: If a `Lock Icon` is unlocked, that `time block` is unsaved and will not persist on page refresh
 
 ## Look
-![Screen Shot](./assets/images/screenshot.png)
+![Screen Shot](./assets/images/screenshot-1.1.png)
 
 ## Links
 - [Deployed Application](https://matt-gross-27.github.io/daily-planner/)

@@ -7,7 +7,7 @@ $("textarea").on("focus",function(){
   $(this)
     .next(".saveBtn")
     .children("span")
-    .addClass("oi-lock-unlocked")
+    .addClass("oi-lock-unlocked text-warning")
     .removeClass("oi-lock-locked");
 });
 
@@ -17,7 +17,7 @@ $(".saveBtn").on("click",function(){
   $(this)
     .children("span")
     .addClass("oi-lock-locked")
-    .removeClass("oi-lock-unlocked");
+    .removeClass("oi-lock-unlocked text-warning");
   // update plansObj
     key = $(this).parent().attr("id")
   value = $(this).siblings("textarea").val();
