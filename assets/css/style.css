@@ -76,3 +76,7 @@ textarea{
 .saveBtn:focus {
   outline: none
 }
+
+.saveBtn span {
+  font-size: 150%;
+}

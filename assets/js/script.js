@@ -95,9 +95,8 @@ setTimeout(
 
 // ~~~~~ DISPLAY DATE TIME ~~~~~
 var displayDateTime = function() {
-  var now = moment().format("ddd MMM DD hh:mm A")
   $("#currentDay")
-    .text(now);
+    .text(moment().format("ddd MMM DD hh:mm A"));
 }
 // ~~~~~ DISPLAY DATE TIME ONCE A MINUTE ON THE MINUTE ~~~~~
 var displayDateTimeEveryMinute = function(){
